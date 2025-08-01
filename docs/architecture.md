@@ -1,6 +1,6 @@
 # トクビザ - システムアーキテクチャ
 
-*Supabase × Next.js × Vercel × Modal による次世代特定技能採用プラットフォーム*
+*Supabase × Vercel(Next.js) × Modal(Python) による次世代特定技能採用プラットフォーム*
 
 ## プロジェクト概要
 
@@ -10,8 +10,8 @@
 
 ```mermaid
 graph TD
-    A[Vercel/Next.js] --> B[API Routes]
-    A --> C[Modal<br/>PDF処理]
+    A[Vercel<br/>Next.js] --> B[API Routes]
+    A --> C[Modal<br/>Python PDF処理]
     B --> D[Supabase]
     C --> D
     D --> E[PostgreSQL]
