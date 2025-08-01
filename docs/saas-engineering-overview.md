@@ -1,6 +1,6 @@
 # モダンSaaSプラットフォーム - 技術アーキテクチャ
 
-*Supabase × Next.js × Vercel × Modal による次世代エンタープライズSaaS*
+*Supabase × Vercel(Next.js) × Modal(Python) による次世代エンタープライズSaaS*
 
 ## プロジェクト概要
 
@@ -33,19 +33,18 @@ graph TD
 - **Row Level Security**: 企業ごとのデータ分離
 - **ストレージ**: S3互換API、CDN統合
 
-### Next.js - フロントエンドフレームワーク
+### Vercel(Next.js) - フロントエンド&ホスティング
 - **App Router**: 最新のファイルベースルーティング
 - **Server Components**: 高速な初期表示とSEO最適化
 - **TypeScript**: 型安全性による堅牢な開発
 - **Tailwind CSS**: 効率的なスタイリング
 
-### Vercel - ホスティング&デプロイメント
 - **自動デプロイ**: GitHubプッシュで即座に本番反映
 - **プレビュー環境**: PRごとの独立した検証環境
 - **エッジネットワーク**: グローバル配信とDDoS保護
 - **Analytics**: パフォーマンス監視と最適化
 
-### Modal - ドキュメント処理サーバー
+### Modal(Python) - ドキュメント処理サーバー
 - **Python実装**: 40種類以上の複雑なドキュメント生成
 - **オンデマンド実行**: 使用時のみ起動しコスト最適化
 - **高速処理**: 並列処理による数秒での生成完了
