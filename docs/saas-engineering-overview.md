@@ -63,7 +63,7 @@ graph TD
 
 **採用理由：**
 - PostgreSQLベースの堅牢なデータベース
-- リアルタイムサブスクリプション機能
+- イベントドリブンアーキテクチャのサポート
 - 組み込みの認証・認可システム
 
 **コア機能：**
@@ -140,14 +140,14 @@ CREATE POLICY "tenant_isolation" ON documents
   FOR ALL USING (tenant_id = current_setting('app.current_tenant')::uuid);
 ```
 
-### 2. リアルタイムデータ同期
+### 2. データ同期と整合性
 
-**課題：** 複数ユーザー間でのリアルタイムコラボレーション
+**課題：** 複数ユーザー環境でのデータ整合性の確保
 
 **解決策：**
-- Supabase Realtime によるWebSocket接続
-- Conflict-free Replicated Data Types (CRDT) の実装
-- 楽観的UIアップデートとロールバック機構
+- トランザクション管理による整合性保証
+- 楽観的ロックによる競合解決
+- イベントソーシングパターンの採用
 
 ### 3. 大規模ドキュメント処理
 
