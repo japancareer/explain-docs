@@ -46,7 +46,7 @@ graph TD
 
 ## 技術スタック詳細
 
-### フロントエンド層 - Next.js 14 (App Router)
+### フロントエンド層 - Next.js (App Router)
 
 **採用理由：** 
 - React Server Componentsによる最適なパフォーマンス
@@ -67,7 +67,7 @@ graph TD
 - 組み込みの認証・認可システム
 
 **コア機能：**
-- **PostgreSQL 15**: 
+- **PostgreSQL**: 
   - JSONBによる柔軟なスキーマ設計
   - 高度なインデックス戦略
   - パーティショニングによる大規模データ対応
@@ -176,33 +176,11 @@ CREATE POLICY "tenant_isolation" ON documents
 - **Query Optimization**: EXPLAINによる定期的な分析
 - **Caching Strategy**: Redis互換キャッシュレイヤー
 
-## セキュリティアーキテクチャ
-
-### 多層防御戦略
-1. **ネットワーク層**
-   - WAF (Web Application Firewall)
-   - DDoS Protection
-   - Rate Limiting
-
-2. **アプリケーション層**
-   - CSP (Content Security Policy)
-   - XSS/CSRF Protection
-   - Input Validation & Sanitization
-
-3. **データ層**
-   - Encryption at Rest (AES-256)
-   - Encryption in Transit (TLS 1.3)
-   - Key Management Service統合
-
 ## 開発プロセスとツール
 
 ### CI/CD パイプライン
 ```yaml
 # GitHub Actions ワークフローの例
-- TypeScript型チェック
-- ESLint/Prettier
-- Jest/Cypress テスト実行
-- Lighthouse パフォーマンステスト
 - Vercelへの自動デプロイ
 ```
 
@@ -215,20 +193,12 @@ CREATE POLICY "tenant_isolation" ON documents
 ## チーム構成への期待
 
 ### 必要なスキルセット
-1. **フルスタックエンジニア**
-   - Next.js/React の実務経験
-   - TypeScriptでの大規模開発経験
-   - PostgreSQLのパフォーマンスチューニング
 
-2. **バックエンドエンジニア**
-   - Python での並列処理実装経験
-   - サーバーレスアーキテクチャの理解
-   - データベース設計とインデックス戦略
-
-3. **DevOps/SRE**
-   - Infrastructure as Code (Terraform等)
-   - 監視・アラートシステムの構築
-   - セキュリティベストプラクティス
+**フルスタックエンジニア**
+- Next.js/React の実務経験
+- TypeScriptでの開発経験
+- Python でのアプリケーションサーバ構築
+- サーバーレスアーキテクチャの理解
 
 ## まとめ
 
