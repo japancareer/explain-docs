@@ -8,22 +8,24 @@
 
 ## システム全体アーキテクチャ
 
-```
-┌─────────────────────────────────────┐
-│         Vercel (Next.js)            │
-└─────────────────────────────────────┘
-                  ↓
-┌──────────────┐    ┌────────────────┐
-│  API Routes  │    │ Modal(PDF処理) │
-└──────────────┘    └────────────────┘
-         ↓                    ↓
-┌─────────────────────────────────────┐
-│            Supabase                 │
-└─────────────────────────────────────┘
-                  ↓
-┌──────────┐ ┌──────┐ ┌─────────┐ ┌─────┐
-│PostgreSQL│ │ Auth │ │ Storage │ │ RLS │
-└──────────┘ └──────┘ └─────────┘ └─────┘
+```mermaid
+graph TD
+    A[Vercel/Next.js] --> B[API Routes]
+    A --> C[Modal<br/>PDF処理]
+    B --> D[Supabase]
+    C --> D
+    D --> E[PostgreSQL]
+    D --> F[Auth]
+    D --> G[Storage]
+    D --> H[RLS]
+    
+    style A fill:#0070f3,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#ff6b6b,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#3ecf8e,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#336791,stroke:#333,stroke-width:2px,color:#fff
+    style F fill:#764abc,stroke:#333,stroke-width:2px,color:#fff
+    style G fill:#f89e4f,stroke:#333,stroke-width:2px,color:#fff
+    style H fill:#e55353,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 ## Supabase - バックエンドインフラ
